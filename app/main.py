@@ -1,6 +1,11 @@
+import sys
+import os
+
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
 from fastapi import FastAPI
-from app.routers import task, user
-from app.backend.db import Base
+from routers import task, user
+from backend.db import Base
 
 
 app = FastAPI()
